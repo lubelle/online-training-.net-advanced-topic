@@ -13,7 +13,7 @@ namespace DelegatesDemo
             var photoProcessor = new PhotoProcessor();
             var filter = new PhotoFilters();
 
-            PhotoFilterHandler filterHandler = filter.ApplyBrightness;
+            Action<Photo> filterHandler = filter.ApplyBrightness;
             filterHandler += filter.ApplyContrast;
             filterHandler += RemoveRedEyeFilter;
 

@@ -1,10 +1,10 @@
-﻿namespace DelegatesDemo
-{
-    public delegate void PhotoFilterHandler(Photo photo);
+﻿using System;
 
+namespace DelegatesDemo
+{
     public class PhotoProcessor
     {
-        public void Process(string path, PhotoFilterHandler filterHandler)
+        public void Process(string path, Action<Photo> filterHandler)
         {
             var photo = Photo.Load(path);
 
